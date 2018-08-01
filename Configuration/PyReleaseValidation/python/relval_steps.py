@@ -407,6 +407,20 @@ steps['RunNoBPTX2018B']={'INPUT':InputInfo(dataSet='/NoBPTX/Run2018B-v1/RAW',lab
 steps['RunDisplacedJet2018B']={'INPUT':InputInfo(dataSet='/DisplacedJet/Run2018B-v1/RAW',label='displacedJet2018B',events=100000,location='STD', ls=Run2018B)}
 steps['RunCharmonium2018B']={'INPUT':InputInfo(dataSet='/Charmonium/Run2018B-v1/RAW',label='charm2018B',events=100000,location='STD', ls=Run2018B)}
 
+#### run2 2018C ####
+Run2018C={319450: [[1, 100]]}
+steps['RunHLTPhy2018C']={'INPUT':InputInfo(dataSet='/HLTPhysics/Run2018C-v1/RAW',label='hltPhy2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunEGamma2018C']={'INPUT':InputInfo(dataSet='/EGamma/Run2018C-v1/RAW',label='EGamma2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunDoubleMuon2018C']={'INPUT':InputInfo(dataSet='/DoubleMuon/Run2018C-v1/RAW',label='doubMu2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunJetHT2018C']={'INPUT':InputInfo(dataSet='/JetHT/Run2018C-v1/RAW',label='jetHT2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunMET2018C']={'INPUT':InputInfo(dataSet='/MET/Run2018C-v1/RAW',label='met2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunMuonEG2018C']={'INPUT':InputInfo(dataSet='/MuonEG/Run2018C-v1/RAW',label='muEG2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunSingleMu2018C']={'INPUT':InputInfo(dataSet='/SingleMuon/Run2018C-v1/RAW',label='sigMu2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunZeroBias2018C']={'INPUT':InputInfo(dataSet='/ZeroBias/Run2018C-v1/RAW',label='zb2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunMuOnia2018C']={'INPUT':InputInfo(dataSet='/MuOnia/Run2018C-v1/RAW',label='muOnia2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunNoBPTX2018C']={'INPUT':InputInfo(dataSet='/NoBPTX/Run2018C-v1/RAW',label='noBptx2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunDisplacedJet2018C']={'INPUT':InputInfo(dataSet='/DisplacedJet/Run2018C-v1/RAW',label='displacedJet2018C',events=100000,location='STD', ls=Run2018C)}
+steps['RunCharmonium2018C']={'INPUT':InputInfo(dataSet='/Charmonium/Run2018C-v1/RAW',label='charm2018C',events=100000,location='STD', ls=Run2018C)}
 
 # Highstat HLTPhysics
 Run2015DHS=selectedLS([258712,258713,258714,258741,258742,258745,258749,258750,259626,259637,259683,259685,259686,259721,259809,259810,259818,259820,259821,259822,259862,259890,259891])

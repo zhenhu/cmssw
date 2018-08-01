@@ -354,6 +354,20 @@ workflows[136.870] = ['',['RunNoBPTX2018B','HLTDR2_2018','RECODR2_2018reHLTAlCaT
 workflows[136.871] = ['',['RunDisplacedJet2018B','HLTDR2_2018','RECODR2_2018reHLT_skimDisplacedJet_Prompt','HARVEST2018']]
 workflows[136.872] = ['',['RunCharmonium2018B','HLTDR2_2018','RECODR2_2018reHLT_skimCharmonium_Prompt','HARVEST2018']]
 
+### run 2018C ###
+workflows[136.873] = ['',['RunHLTPhy2018C','HLTDR2_2018','RECODR2_2018reHLT_Prompt','HARVEST2018']]
+workflows[136.874] = ['',['RunEGamma2018C','HLTDR2_2018','RECODR2_2018reHLT_skimEGamma_Prompt_L1TEgDQM','HARVEST2018_L1TEgDQM']]
+workflows[136.875] = ['',['RunDoubleMuon2018C','HLTDR2_2018','RECODR2_2018reHLT_Prompt','HARVEST2018']]
+workflows[136.876] = ['',['RunJetHT2018C','HLTDR2_2018','RECODR2_2018reHLT_skimJetHT_Prompt','HARVEST2018']]
+workflows[136.877] = ['',['RunMET2018C','HLTDR2_2018','RECODR2_2018reHLT_skimMET_Prompt','HARVEST2018']]
+workflows[136.878] = ['',['RunMuonEG2018C','HLTDR2_2018','RECODR2_2018reHLT_skimMuonEG_Prompt','HARVEST2018']]
+workflows[136.879] = ['',['RunSingleMu2018C','HLTDR2_2018','RECODR2_2018reHLT_skimSingleMu_Prompt_Lumi','HARVEST2018_L1TMuDQM']]
+workflows[136.880] = ['',['RunZeroBias2018C','HLTDR2_2018','RECODR2_2018reHLT_Prompt','HARVEST2018']]
+workflows[136.881] = ['',['RunMuOnia2018C','HLTDR2_2018','RECODR2_2018reHLT_skimMuOnia_Prompt','HARVEST2018']]
+workflows[136.882] = ['',['RunNoBPTX2018C','HLTDR2_2018','RECODR2_2018reHLTAlCaTkCosmics_Prompt','HARVEST2018']]
+workflows[136.883] = ['',['RunDisplacedJet2018C','HLTDR2_2018','RECODR2_2018reHLT_skimDisplacedJet_Prompt','HARVEST2018']]
+workflows[136.884] = ['',['RunCharmonium2018C','HLTDR2_2018','RECODR2_2018reHLT_skimCharmonium_Prompt','HARVEST2018']]
+
 
 ### fastsim ###
 workflows[5.1] = ['TTbar', ['TTbarFS','HARVESTFS']]
