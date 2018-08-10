@@ -317,6 +317,7 @@ workflows[136.848] = ['',['RunCharmonium2017F','HLTDR2_2017','RECODR2_2017reHLT_
 # reminiAOD wf on 2017F 94X input
 workflows[136.8311] = ['',['RunJetHT2017F_reminiaod','REMINIAOD_data2017','HARVEST2017_REMINIAOD_data2017']]
 
+workflows[136.873] = ['',['RunTau2018B','HLTDR2_2018','RECODR2_2018reHLT_skimTau_Prompt','HARVEST2018']]
 
 ### fastsim ###
 workflows[5.1] = ['TTbar', ['TTbarFS','HARVESTFS']]

@@ -110,7 +110,7 @@ class MatrixInjector(object):
             "Multicore" : 1,   # do not set multicore for the whole chain
             "Memory" : 3000,
             "SizePerEvent" : 1234,
-            "TimePerEvent" : 0.1,
+            "TimePerEvent" : 10,
             "PrepID": os.getenv('CMSSW_VERSION')
             }
 
@@ -212,10 +212,12 @@ class MatrixInjector(object):
             wmsplit['RECODR2_2017reHLT_skimDoubleEG_Prompt']=1
             wmsplit['RECODR2_2017reHLT_skimMET_Prompt']=1
             wmsplit['RECODR2_2017reHLT_skimMuOnia_Prompt']=1
+            wmsplit['RECODR2_2018reHLT_skimTau_Prompt']=1
             wmsplit['HLTDR2_50ns']=1
             wmsplit['HLTDR2_25ns']=1
             wmsplit['HLTDR2_2016']=1
             wmsplit['HLTDR2_2017']=1
+            wmsplit['HLTDR2_2018']=1
             wmsplit['Hadronizer']=1
             wmsplit['DIGIUP15']=1 
             wmsplit['RECOUP15']=1 
