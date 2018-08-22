@@ -92,6 +92,8 @@ steps['HighMet2011B']={'INPUT':InputInfo(dataSet='/Jet/Run2011B-HighMET-19Nov201
 steps['RunHI2010']={'INPUT':InputInfo(dataSet='/HIAllPhysics/HIRun2010-v1/RAW',label='hi2010',run=[152698],events=10000,location='STD')}
 steps['RunHI2011']={'INPUT':InputInfo(dataSet='/HIMinBiasUPC/HIRun2011-v1/RAW',label='hi2011',run=[182124],events=10000,location='STD')}
 steps['RunPA2013']={'INPUT':InputInfo(dataSet='/PAMinBiasUPC/HIRun2013-v1/RAW',label='pa2013',run=[211313],events=10000,location='STD')}
+steps['RunHI2017']={'INPUT':InputInfo(dataSet='/HIMinimumBias1/XeXeRun2017-v1/RAW',label='hi2017',run=[304906],events=10000,location='STD')}
+
 
 Run2012A=[191226]
 Run2012ASk=Run2012A+[]
@@ -1533,6 +1535,8 @@ steps['RECOHID11']=merge([{'--repacked':''},
 steps['RECOHID10']['-s']+=',REPACK'
 steps['RECOHID10']['--datatier']+=',RAW'
 steps['RECOHID10']['--eventcontent']+=',REPACKRAW'
+steps['RECOHID18']=merge([{'--repacked':'','--conditions':'auto:run2_data','--era':'Run2_2018_pp_on_AA'},
+                        steps['RECOHID10']])
 
 steps['TIER0']=merge([{'--customise':'Configuration/DataProcessing/RecoTLR.customisePrompt',
                        '-s':'RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:@allForPrompt,DQM:@allForPrompt,ENDJOB',
@@ -2221,6 +2225,7 @@ steps['HARVESTDHI']={'-s':'HARVESTING:dqmHarvesting',
                    '--filetype':'DQM',
                    '--data':'',
                    '--scenario':'HeavyIons'}
+steps['HARVESTDHI18']=merge([{'--conditions':'auto:run2_data','--era':'Run2_2018_pp_on_AA' }, steps['HARVESTDHI']])
 
 
 #MC
