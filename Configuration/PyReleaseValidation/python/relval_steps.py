@@ -2638,7 +2638,8 @@ for year,k in [(year,k) for year in upgradeKeys for k in upgradeKeys[year]]:
                                       '-n':'10',
                                       '--runUnscheduled':'',
                                       '--eventcontent':'RECOSIM,MINIAODSIM,DQM',
-                                      '--geometry' : geom
+                                      '--geometry' : geom,
+												  '--customise_commands':'"process.hbheprereco.algorithm.activeBXs=cms.vint32(-2,-1,0,1,2,3)"'
                                       }
 
     upgradeStepDict['RecoFullGlobal'][k] = {'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,PAT,VALIDATION:@phase2Validation+@miniAODValidation,DQM:@phase2+@miniAODDQM',
