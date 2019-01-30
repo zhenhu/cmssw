@@ -634,6 +634,11 @@ steps['TTbar_13_94XNanoAODProdINPUT16']={'INPUT':InputInfo(dataSet='/TTJets_Sing
 steps['DYJetsToLL_13_94XNanoAODProdINPUT16']={'INPUT':InputInfo(dataSet='/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM',label='nanoaod94X2016',location='STD',events=100000)}
 steps['QCD_13_94XNanoAODProdINPUT16']={'INPUT':InputInfo(dataSet='/QCD_Pt-20toInf_MuEnrichedPt15_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM',label='nanoaod94X2016',location='STD',events=100000)}
 steps['GGHToZZ_13_94XNanoAODProdINPUT16']={'INPUT':InputInfo(dataSet='/GluGluHToZZTo2L2Q_M500_13TeV_powheg2_JHUgenV698_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM',label='nanoaod94X2016',location='STD',events=100000)}
+#input with 2018 productions
+steps['TTbar_13_102XNanoAODProdINPUT']={'INPUT':InputInfo(dataSet='/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM',label='nanoaod102X2018',location='STD',events=100000)}
+steps['DYJetsToLL_13_102XNanoAODProdINPUT']={'INPUT':InputInfo(dataSet='/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM',label='nanoaod102X2018',location='STD',events=100000)}
+steps['QCD_FlatPt_13_102XNanoAODProdINPUT']={'INPUT':InputInfo(dataSet='/QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8/RunIIAutumn18MiniAOD-NoPU_102X_upgrade2018_realistic_v15-v1/MINIAODSIM',label='nanoaod102X2018',location='STD',events=100000)}
+steps['GGHToZZ_13_102XNanoAODProdINPUT']={'INPUT':InputInfo(dataSet='/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM',label='nanoaod102X2018',location='STD',events=100000)}
 
 # 13 TeV recycle GEN-SIM input
 steps['MinBias_13INPUT']={'INPUT':InputInfo(dataSet='/RelValMinBias_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
@@ -990,6 +995,7 @@ steps['SingleMuPt100FS_UP17']=merge([{'cfg':'SingleMuPt100_pythia8_cfi'},step1Fa
 PUFS25={'--pileup':'AVE_35_BX_25ns',
         '--pileup_input':'das:/RelValMinBiasFS_13_ForMixing/%s/GEN-SIM-RECO'%(baseDataSetRelease[7],)}
 FS_UP15_PU25_OVERLAY = merge([PUFS25,Kby(100,500),steps['TTbarFS_13']] )
+
 
 ### FastSim: produce sample of premixed minbias events
 steps["FS_PREMIXUP15_PU25"] = merge([
@@ -2557,6 +2563,7 @@ steps['NANOEDMMC2017'] = merge([{'--conditions': 'auto:phase1_2017_realistic', '
 steps['NANOEDMMC2017_94XMiniAODv1'] = merge([{'--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv1'}, steps['NANOEDMMC2017'] ])
 steps['NANOEDMMC2017_94XMiniAODv2'] = merge([{'--conditions': '102X_mc2017_realistic_v6', '--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv2'}, steps['NANOEDMMC2017'] ])
 steps['NANOEDMMC2016_80X'] = merge([{'--conditions': 'auto:run2_mc', '--era': 'Run2_2016,run2_miniAOD_80XLegacy'}, steps['NANOEDMMC2017'] ])
+steps['NANOEDMMC2018_102XMiniAOD'] = merge([{'--conditions': 'auto:phase1_2018_realistic', '--era': 'Run2_2018,run2_nanoAOD_102Xv1'}, steps['NANOEDMMC2017'] ])
 steps['NANOEDMMC2018_PROD'] = merge([{'--conditions': 'auto:phase1_2018_realistic', '--era': 'Run2_2018', '--filein':'file:step3_inMINIAODSIM.root'}, stepNanoEDMMCProd ])
 steps['NANOEDMMC2016_94XMiniAOD'] = merge([{'--conditions': '102X_mcRun2_asymptotic_v6', '--era': 'Run2_2016,run2_nanoAOD_94X2016'}, steps['NANOEDMMC2017'] ])
 
@@ -2571,6 +2578,7 @@ steps['HARVESTNANOAODMC2017_94XMiniAODv1']=merge([{'--era': 'Run2_2017,run2_nano
 steps['HARVESTNANOAODMC2017_94XMiniAODv2']=merge([{'--conditions': '102X_mc2017_realistic_v6', '--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv2'},steps['HARVESTNANOAODMC2017']])
 steps['HARVESTNANOAODMC2016_80X']=merge([{'--conditions': 'auto:run2_mc','--era': 'Run2_2016,run2_miniAOD_80XLegacy'},steps['HARVESTNANOAODMC2017']])
 steps['HARVESTNANOAODMC2016_94XMiniAOD']=merge([{'--conditions': '102X_mcRun2_asymptotic_v6','--era': 'Run2_2016,run2_nanoAOD_94X2016'},steps['HARVESTNANOAODMC2017']])
+steps['HARVESTNANOAODMC2018_102XMiniAOD']=merge([{'--conditions': 'auto:phase1_2018_realistic','--era': 'Run2_2018,run2_nanoAOD_102Xv1'},steps['HARVESTNANOAODMC2017']])
 
 steps['HARVESTNANOAOD2017']=merge([{'--data':'','-s':'HARVESTING:@nanoAODDQM','--conditions':'auto:run2_data_relval','--era':'Run2_2017'},steps['HARVESTDR2']])
 steps['HARVESTNANOAOD2017_94XMiniAODv1']=merge([{'--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv1'},steps['HARVESTNANOAOD2017']])
