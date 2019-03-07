@@ -256,6 +256,10 @@ class MatrixInjector(object):
             wmsplit['HYBRIDRepackHI2015VR']=1
             wmsplit['HYBRIDZSHI2015']=1
             wmsplit['RECOHID15']=1
+            wmsplit['DigiFull_2018']=5 # no more than 500 events per job 
+            wmsplit['RecoFull_2018']=5 # no more than 500 events per job 
+            wmsplit['DigiFullPU_2018PU']=1 # no more than 500 events per job 
+            wmsplit['RecoFullPU_2018PU']=1 # no more than 500 events per job 
                                     
             #import pprint
             #pprint.pprint(wmsplit)            
