@@ -539,7 +539,7 @@ steps['SingleMuPt1_UP15']=gen2015('SingleMuPt1_pythia8_cfi',Kby(25,1000))
 steps['SingleMuPt10_UP15']=gen2015('SingleMuPt10_pythia8_cfi',Kby(25,500))
 steps['SingleMuPt100_UP15']=gen2015('SingleMuPt100_pythia8_cfi',Kby(9,500))
 steps['SingleMuPt1000_UP15']=gen2015('SingleMuPt1000_pythia8_cfi',Kby(9,500))
-steps['NuGun_UP15']=gen2015('SingleNuE10_cfi.py',Kby(9,50))
+steps['NuGun_UP15']=gen2015('SingleNuE10_cfi.py',Kby(100,100))
 steps['TTbar']=gen('TTbar_8TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['TTbarLepton']=gen('TTbarLepton_8TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['ZEE']=gen('ZEE_8TeV_TuneCUETP8M1_cfi',Kby(9,100))
@@ -548,28 +548,32 @@ steps['Wjet_Pt_3000_3500']=gen('Wjet_Pt_3000_3500_8TeV_TuneCUETP8M1_cfi',Kby(9,5
 steps['LM1_sfts']=gen('LM1_sfts_8TeV_cfi',Kby(9,100))
 steps['QCD_FlatPt_15_3000']=gen('QCDForPF_8TeV_TuneCUETP8M1_cfi',Kby(5,100))
 steps['QCD_FlatPt_15_3000HS']=gen('QCDForPF_8TeV_TuneCUETP8M1_cfi',Kby(50,100))
-steps['TTbar_13']=gen2015('TTbar_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
+steps['TTbar_13']=gen2015('TTbar_13TeV_TuneCUETP8M1_cfi',Kby(100,100))
 steps['TTbarLepton_13']=gen2015('TTbarLepton_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
-steps['ZEE_13']=gen2015('ZEE_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
+steps['ZEE_13']=gen2015('ZEE_13TeV_TuneCUETP8M1_cfi',Kby(100,100))
 steps['ZEE_13_DBLMINIAOD']=gen2015('ZEE_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
 steps['Wjet_Pt_80_120_13']=gen2015('Wjet_Pt_80_120_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['Wjet_Pt_3000_3500_13']=gen2015('Wjet_Pt_3000_3500_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
 steps['SMS-T1tttt_mGl-1500_mLSP-100_13']=gen2015('SMS-T1tttt_mGl-1500_mLSP-100_13TeV-pythia8_cfi',Kby(9,50))
-steps['QCD_FlatPt_15_3000_13']=gen2015('QCDForPF_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
-steps['QCD_FlatPt_15_3000HS_13']=gen2015('QCDForPF_13TeV_TuneCUETP8M1_cfi',Kby(50,100))
+steps['QCD_FlatPt_15_3000_13']=gen2015('QCDForPF_13TeV_TuneCUETP8M1_cfi',Kby(50,100))
+steps['QCD_FlatPt_15_3000HS_13']=gen2015('QCDForPF_13TeV_TuneCUETP8M1_cfi',Kby(1000,200))
+steps['TenTau_13']=gen2015('TenTau_E_15_500_pythia8_cfi',Kby(100,100))
 
 steps['ZpMM_2250_8TeV']=gen('ZpMM_2250_8TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['ZpEE_2250_8TeV']=gen('ZpEE_2250_8TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['ZpTT_1500_8TeV']=gen('ZpTT_1500_8TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['ZpMM_2250_13']=gen2015('ZpMM_2250_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
-steps['ZpEE_2250_13']=gen2015('ZpEE_2250_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
+steps['ZpEE_2250_13']=gen2015('ZpEE_2250_13TeV_TuneCUETP8M1_cfi',Kby(100,100))
 steps['ZpTT_1500_13']=gen2015('ZpTT_1500_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['HSCPstop_M_200_13']=gen2015('HSCPstop_M_200_TuneCUETP8M1_13TeV_pythia8_cff',Kby(9,100))
 steps['RSGravitonToGaGa_13']=gen2015('RSGravitonToGammaGamma_kMpl01_M_3000_TuneCUETP8M1_13TeV_pythia8_cfi',Kby(9,100))
 steps['WpToENu_M-2000_13']=gen2015('WprimeToENu_M-2000_TuneCUETP8M1_13TeV-pythia8_cff',Kby(9,100))
 steps['DisplacedSUSY_stopToBottom_M_300_1000mm_13']=gen2015('DisplacedSUSY_stopToBottom_M_300_1000mm_TuneCUETP8M1_13TeV_pythia8_cff',Kby(9,100))
-
-
+steps['ZprimeToEE_M5000_13']=gen2015('ZprimeToEE_M_5000_TuneCUETP8M1_13TeV_pythia8_cfi',Kby(100,100))
+steps['Kpipi_13']=gen2015('Kpipi_13TeV_cfi',Kby(800,200))
+steps['K3pipi_13']=gen2015('K3pipi_13TeV_cfi',Kby(1500,500))
+steps['KpiJpsi_13']=gen2015('KpiJpsi_13TeV_cfi',Kby(3000,1000))
+steps['XiLambdaPi_13']=gen2015('XiLambdaPi_13TeV_cfi',Kby(7000,2000))
 ### 2017 wf: only the ones for premixing (for the moment)
 steps['NuGun_UP17']=gen2017('SingleNuE10_cfi.py',Kby(9,50))
 steps['TTbar_13UP17']=gen2017('TTbar_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
@@ -612,7 +616,7 @@ baseDataSetRelease=[
     'CMSSW_6_2_0_pre8-PRE_ST62_V8_FastSim-v1',              # 2 for fastsim id test
 #    'CMSSW_7_1_0_pre5-START71_V1-v2',                      # 3 8 TeV , for the one sample which is part of the routine relval production (RelValZmumuJets_Pt_20_300, because of -v2)
                                                             # THIS ABOVE IS NOT USED, AT THE MOMENT
-    'CMSSW_10_5_0_pre1-103X_mcRun2_asymptotic_v3-v1',              # 3 - GEN-SIM input for 13 TeV 2016 workfows
+    'CMSSW_10_5_0_pre2-PU25ns_105X_mcRun2_asymptotic_v1_HS-v1',              # 3 - GEN-SIM input for 13 TeV 2016 workfows
     'CMSSW_7_3_0_pre1-PRE_LS172_V15_FastSim-v1',                   # 4 - fast sim GEN-SIM-DIGI-RAW-HLTDEBUG for id tests
     'CMSSW_10_4_0_pre1-PU25ns_103X_mcRun2_asymptotic_v1-v2',    # 5 - fullSim PU 25ns UP15 premix library
     'CMSSW_10_4_0_pre1-PU50ns_103X_mcRun2_startup_v1-v1',        # 6 - fullSim PU 50ns UP15 premix library
@@ -677,17 +681,17 @@ steps['QCD_Pt_3000_3500_13INPUT']={'INPUT':InputInfo(dataSet='/RelValQCD_Pt_3000
 steps['QCD_Pt_600_800_13INPUT']={'INPUT':InputInfo(dataSet='/RelValQCD_Pt_600_800_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['QCD_Pt_80_120_13INPUT']={'INPUT':InputInfo(dataSet='/RelValQCD_Pt_80_120_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['QCD_Pt_80_120_13_HIINPUT']={'INPUT':InputInfo(dataSet='/RelValQCD_Pt_80_120_13_HI/%s/GEN-SIM'%(baseDataSetRelease[1],),location='STD')}
-steps['TTbar_13INPUT']={'INPUT':InputInfo(dataSet='/RelValTTbar_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
+steps['TTbar_13INPUT']={'INPUT':InputInfo(dataSet='/RelValTTbar_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
 steps['TTbarLepton_13INPUT']={'INPUT':InputInfo(dataSet='/RelValTTbarLepton_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
-steps['ZEE_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZEE_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
+steps['ZEE_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZEE_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
 #steps['ZEE_13_DBLMINIAODINPUT']={'INPUT':InputInfo(dataSet='/RelValZEE_13_DBLMINIAOD/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['Wjet_Pt_80_120_13INPUT']={'INPUT':InputInfo(dataSet='/RelValWjet_Pt_80_120_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['Wjet_Pt_3000_3500_13INPUT']={'INPUT':InputInfo(dataSet='/RelValWjet_Pt_3000_3500_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['SMS-T1tttt_mGl-1500_mLSP-100_13INPUT']={'INPUT':InputInfo(dataSet='/RelValSMS-T1tttt_mGl-1500_mLSP-100_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['QCD_FlatPt_15_3000_13INPUT']={'INPUT':InputInfo(dataSet='/RelValQCD_FlatPt_15_3000_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
-steps['QCD_FlatPt_15_3000HS_13INPUT']={'INPUT':InputInfo(dataSet='/RelValQCD_FlatPt_15_3000HS_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
+steps['QCD_FlatPt_15_3000HS_13INPUT']={'INPUT':InputInfo(dataSet='/RelValQCD_FlatPt_15_3000HS_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
 steps['ZpMM_2250_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZpMM_2250_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
-steps['ZpEE_2250_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZpEE_2250_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
+steps['ZpEE_2250_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZpEE_2250_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
 steps['ZpTT_1500_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZpTT_1500_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['MinBiasHS_13INPUT']={'INPUT':InputInfo(dataSet='/RelValMinBiasHS_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['Higgs200ChargedTaus_13INPUT']={'INPUT':InputInfo(dataSet='/RelValHiggs200ChargedTaus_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
@@ -708,10 +712,10 @@ steps['BuMixing_13INPUT']={'INPUT':InputInfo(dataSet='/RelValBuMixing_13/%s/GEN-
 steps['WE_13INPUT']={'INPUT':InputInfo(dataSet='/RelValWE_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['WM_13INPUT']={'INPUT':InputInfo(dataSet='/RelValWM_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['WpM_13INPUT']={'INPUT':InputInfo(dataSet='/RelValWpM_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
-steps['ZMM_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZMM_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
+steps['ZMM_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZMM_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
 steps['ZEEMM_13_HIINPUT']={'INPUT':InputInfo(dataSet='/RelValZEEMM_13_HI/%s/GEN-SIM'%(baseDataSetRelease[1],),location='STD')}
 steps['ZpMM_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZpMM_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
-steps['ZTT_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZTT_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
+steps['ZTT_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZTT_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
 steps['H125GGgluonfusion_13INPUT']={'INPUT':InputInfo(dataSet='/RelValH125GGgluonfusion_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['PhotonJets_Pt_10_13INPUT']={'INPUT':InputInfo(dataSet='/RelValPhotonJets_Pt_10_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['PhotonJets_Pt_10_13_HIINPUT']={'INPUT':InputInfo(dataSet='/RelValPhotonJets_Pt_10_13_HI/%s/GEN-SIM'%(baseDataSetRelease[1],),location='STD')}
@@ -725,10 +729,10 @@ steps['BuMixing_13']=gen2015('BuMixing_BMuonFilter_forSTEAM_13TeV_TuneCUETP8M1_c
 steps['Cosmics_UP15INPUT']={'INPUT':InputInfo(dataSet='/RelValCosmics_UP15/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['CosmicsSPLoose_UP15INPUT']={'INPUT':InputInfo(dataSet='/RelValCosmicsSPLoose_UP15/%s/GEN-SIM'%(baseDataSetRelease[12],),location='STD')}
 steps['BeamHalo_13INPUT']={'INPUT':InputInfo(dataSet='/RelValBeamHalo_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
-steps['HSCPstop_M_200_13INPUT']={'INPUT':InputInfo(dataSet='/RelValHSCPstop_M_200_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
+steps['HSCPstop_M_200_13INPUT']={'INPUT':InputInfo(dataSet='/RelValHSCPstop_M_200_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
 steps['RSGravitonToGaGa_13INPUT']={'INPUT':InputInfo(dataSet='/RelValRSGravitonToGaGa_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['WpToENu_M-2000_13INPUT']={'INPUT':InputInfo(dataSet='/RelValWpToENu_M-2000_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
-steps['DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT']={'INPUT':InputInfo(dataSet='/RelValDisplacedSUSY_stopToBottom_M_300_1000mm_13/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
+steps['DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT']={'INPUT':InputInfo(dataSet='/RelValDisplacedSUSY_stopToBottom_M_300_1000mm_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
 
 # particle guns with postLS1 geometry recycle GEN-SIM input
 steps['SingleElectronPt10_UP15INPUT']={'INPUT':InputInfo(dataSet='/RelValSingleElectronPt10_UP15/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
@@ -741,9 +745,13 @@ steps['SingleMuPt1_UP15INPUT']={'INPUT':InputInfo(dataSet='/RelValSingleMuPt1_UP
 steps['SingleMuPt10_UP15INPUT']={'INPUT':InputInfo(dataSet='/RelValSingleMuPt10_UP15/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['SingleMuPt100_UP15INPUT']={'INPUT':InputInfo(dataSet='/RelValSingleMuPt100_UP15/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
 steps['SingleMuPt1000_UP15INPUT']={'INPUT':InputInfo(dataSet='/RelValSingleMuPt1000_UP15/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
-steps['NuGun_UP15INPUT']={'INPUT':InputInfo(dataSet='/RelValNuGun_UP15/%s/GEN-SIM'%(baseDataSetRelease[3],),location='STD')}
-
-
+steps['NuGun_UP15INPUT']={'INPUT':InputInfo(dataSet='/RelValNuGun_UP15/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
+steps['TenTau_13INPUT']={'INPUT':InputInfo(dataSet='/RelValTenTau_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
+steps['ZprimeToEE_M5000_13INPUT']={'INPUT':InputInfo(dataSet='/RelValZprimeToEE_M5000_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
+steps['K3pipi_13INPUT']={'INPUT':InputInfo(dataSet='/RelValK3pipi_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
+steps['Kpipi_13INPUT']={'INPUT':InputInfo(dataSet='/RelValKpipi_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
+steps['KpiJpsi_13INPUT']={'INPUT':InputInfo(dataSet='/RelValKpiJpsi_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
+steps['XiLambdaPi_13INPUT']={'INPUT':InputInfo(dataSet='/RelValXiLambdaPi_13/%s/GEN-SIM-DIGI-RAW-HLTDEBUG'%(baseDataSetRelease[3],),location='STD')}
 # INPUT commands for 2017 wf
 steps['TTbar_13UP17INPUT']={'INPUT':InputInfo(dataSet='/RelValTTbar_13/%s/GEN-SIM'%(baseDataSetRelease[13],),location='STD')}
 steps['ZEE_13UP17INPUT']={'INPUT':InputInfo(dataSet='/RelValZEE_13/%s/GEN-SIM'%(baseDataSetRelease[13],),location='STD')}
@@ -822,7 +830,7 @@ steps['BsToJpsiPhi_13']=gen2015('BsToJpsiPhi_13TeV_SoftQCDnonD_TuneCUEP8M1_cfi',
 steps['WE_13']=gen2015('WE_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['WM_13']=gen2015('WM_13TeV_TuneCUETP8M1_cfi',Kby(9,200))
 steps['WpM_13']=gen2015('WpM_13TeV_TuneCUETP8M1_cfi',Kby(9,200))
-steps['ZMM_13']=gen2015('ZMM_13TeV_TuneCUETP8M1_cfi',Kby(18,100))
+steps['ZMM_13']=gen2015('ZMM_13TeV_TuneCUETP8M1_cfi',Kby(2000,400))
 steps['ZEEMM_13']=gen2015('ZEEMM_13TeV_TuneCUETP8M1_cfi',Kby(18,300))
 steps['ZpMM_13']=gen2015('ZpMM_13TeV_TuneCUETP8M1_cfi',Kby(9,200))
 
@@ -830,7 +838,7 @@ steps['ZTT']=genS('ZTT_All_hadronic_8TeV_TuneCUETP8M1_cfi',Kby(9,150))
 steps['H130GGgluonfusion']=genS('H130GGgluonfusion_8TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['PhotonJets_Pt_10']=genS('PhotonJet_Pt_10_8TeV_TuneCUETP8M1_cfi',Kby(9,150))
 steps['QQH1352T']=genS('QQH1352T_8TeV_TuneCUETP8M1_cfi',Kby(9,100))
-steps['ZTT_13']=gen2015('ZTT_All_hadronic_13TeV_TuneCUETP8M1_cfi',Kby(9,80))
+steps['ZTT_13']=gen2015('ZTT_All_hadronic_13TeV_TuneCUETP8M1_cfi',Kby(100,100))
 steps['H125GGgluonfusion_13']=gen2015('H125GGgluonfusion_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
 steps['PhotonJets_Pt_10_13']=gen2015('PhotonJet_Pt_10_13TeV_TuneCUETP8M1_cfi',Kby(9,150))
 steps['QQH1352T_13']=gen2015('QQH1352T_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
@@ -1453,7 +1461,7 @@ for key in overrideFragments:
 PU={'-n':10,'--pileup':'default','--pileup_input':'das:/RelValMinBias/%s/GEN-SIM'%(baseDataSetRelease[0],)}
 # pu2 can be removed
 PU2={'-n':10,'--pileup':'default','--pileup_input':'das:/RelValMinBias/%s/GEN-SIM'%(baseDataSetRelease[0],)}
-PU25={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(baseDataSetRelease[3],)}
+PU25={'-n':10,'--pileup':'2016_25ns_Moriond17MC_PoissonOOTPU','--pileup_input':'das:/RelValMinBias_13/CMSSW_10_5_0_pre1-103X_mcRun2_asymptotic_v3-v1/GEN-SIM'}
 PU50={'-n':10,'--pileup':'AVE_35_BX_50ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(baseDataSetRelease[3],)}
 PUHI={'-n':10,'--pileup_input':'das:/RelValHydjetQ_B12_5020GeV_2018/%s/GEN-SIM'%(baseDataSetRelease[9])}
 PU25UP17={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(baseDataSetRelease[13],)}
@@ -1999,7 +2007,8 @@ step3Up2015Defaults = {
     '-n':'10',
     '--datatier':'GEN-SIM-RECO,MINIAODSIM,DQMIO',
     '--eventcontent':'RECOSIM,MINIAODSIM,DQM',
-    '--era' : 'Run2_2016'
+    '--era' : 'Run2_2016',
+    '--customise':'RecoTracker/IterativeTracking/customise_MVAPhase1_cfi.customise_MVAPhase1'
     }
 
 step3Up2015Defaults50ns = merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidationNoHLT+@miniAODValidation,DQM:@standardDQMFakeHLT+@miniAODDQM','--conditions':'auto:run2_mc_50ns','--era':'Run2_50ns'},step3Up2015Defaults])
@@ -2875,9 +2884,9 @@ steps['NanoFullBadHcalMitig']=merge([{'--era' : 'Run2_2018,pf_badHcalMitigation'
 from  Configuration.PyReleaseValidation.upgradeWorkflowComponents import *
 
 defaultDataSets={}
-defaultDataSets['2017']='CMSSW_10_5_0_pre1-103X_mc2017_realistic_v2-v'
+defaultDataSets['2017']='CMSSW_10_5_0_pre2-PU25ns_105X_mc2017_realistic_v4_HS-v'
 defaultDataSets['2017Design']='CMSSW_10_0_0_pre2-100X_mc2017_design_IdealBS_v1-v'
-defaultDataSets['2018']='CMSSW_10_5_0_pre1-103X_upgrade2018_realistic_v8-v'
+defaultDataSets['2018']='CMSSW_10_5_0_pre2-PU25ns_105X_upgrade2018_realistic_v2_HS-v'
 defaultDataSets['2018Design']='CMSSW_10_5_0_pre1-103X_upgrade2018_design_v4-v'
 #defaultDataSets['2019']=''
 #defaultDataSets['2019Design']=''
@@ -2905,7 +2914,7 @@ for key in keys:
   defaultDataSets[key+'PU']=defaultDataSets[key]
 
 # sometimes v1 won't be used - override it here - the dictionary key is gen fragment + '_' + geometry
-versionOverrides={'BuMixing_BMuonFilter_forSTEAM_13TeV_TuneCUETP8M1_2017':'2','SingleElectronPt10_pythia8_2017':'2','HSCPstop_M_200_TuneCUETP8M1_13TeV_pythia8_2017':'2','RSGravitonToGammaGamma_kMpl01_M_3000_TuneCUETP8M1_13TeV_pythia8_2017':'2','WprimeToENu_M-2000_TuneCUETP8M1_13TeV-pythia8_2017':'2','DisplacedSUSY_stopToBottom_M_300_1000mm_TuneCUETP8M1_13TeV_pythia8_2017':'2','TenE_E_0_200_pythia8_2017':'2','TenE_E_0_200_pythia8_2017PU':'2','QQH1352T_13TeV_TuneCUETP8M1_2018':'2', 'TenTau_E_15_500_pythia8_2018':'2','PhotonJet_Pt_10_13TeV_TuneCUETP8M1_2018':'2','QCD_Pt_600_800_13TeV_TuneCUETP8M1_2018':'2','Wjet_Pt_80_120_13TeV_TuneCUETP8M1_2018':'2'}
+versionOverrides={'BuMixing_BMuonFilter_forSTEAM_13TeV_TuneCUETP8M1_2017':'2','SingleElectronPt10_pythia8_2017':'2','HSCPstop_M_200_TuneCUETP8M1_13TeV_pythia8_2017':'2','RSGravitonToGammaGamma_kMpl01_M_3000_TuneCUETP8M1_13TeV_pythia8_2017':'2','WprimeToENu_M-2000_TuneCUETP8M1_13TeV-pythia8_2017':'2','DisplacedSUSY_stopToBottom_M_300_1000mm_TuneCUETP8M1_13TeV_pythia8_2017':'2','TenE_E_0_200_pythia8_2017':'2','TenE_E_0_200_pythia8_2017PU':'2','QQH1352T_13TeV_TuneCUETP8M1_2018':'2', 'TenTau_E_15_500_pythia8_2018':'2','PhotonJet_Pt_10_13TeV_TuneCUETP8M1_2018':'2','QCD_Pt_600_800_13TeV_TuneCUETP8M1_2018':'2','Wjet_Pt_80_120_13TeV_TuneCUETP8M1_2018':'2','Kpipi_13TeV_2018PU':'2','K3pipi_13TeV_2018PU':'2','KpiJpsi_13TeV_2018PU':'2','Kpipi_13TeV_2017PU':'2','K3pipi_13TeV_2017PU':'2','KpiJpsi_13TeV_2017PU':'2'}
 
 baseDataSetReleaseBetter={}
 for gen in upgradeFragments:
@@ -2922,9 +2931,9 @@ for ds in defaultDataSets:
     name=baseDataSetReleaseBetter[key]
 #    if '2017' in name or '2018' in name:
     if '2017' in name:
-    	PUDataSets[ds]={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
+    	PUDataSets[ds]={'-n':10,'--pileup':'2017_25ns_WinterMC_PUScenarioV1_PoissonOOTPU','--pileup_input':'das:/RelValMinBias_13/CMSSW_10_5_0_pre1-103X_mc2017_realistic_v2-v1/GEN-SIM'}
     elif '2018' in name:
-    	PUDataSets[ds]={'-n':10,'--pileup':'AVE_50_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
+    	PUDataSets[ds]={'-n':10,'--pileup':'2018_25ns_JuneProjectionFull18_PoissonOOTPU','--pileup_input':'das:/RelValMinBias_13/CMSSW_10_5_0_pre1-103X_upgrade2018_realistic_v8-v1/GEN-SIM'}
     else:
         PUDataSets[ds]={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_14TeV/%s/GEN-SIM'%(name,)}
 
@@ -3009,7 +3018,8 @@ for year,k in [(year,k) for year in upgradeKeys for k in upgradeKeys[year]]:
                                       '-n':'10',
                                       '--runUnscheduled':'',
                                       '--eventcontent':'RECOSIM,MINIAODSIM,DQM',
-                                      '--geometry' : geom
+                                      '--geometry' : geom,
+                                      '--customise':'RecoTracker/IterativeTracking/customise_MVAPhase1_cfi.customise_MVAPhase1'
                                       }
 
     upgradeStepDict['RecoFullGlobal'][k] = {'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,PAT,VALIDATION:@phase2Validation+@miniAODValidation,DQM:@phase2+@miniAODDQM',
@@ -3202,7 +3212,8 @@ for step in upgradeStepDict.keys():
                     #so please be careful
                     s=frag[:-4]+'_'+key
                     if 'FastSim' not in k and 'Premix' not in step and s+'INPUT' not in steps and s in baseDataSetReleaseBetter and defaultDataSets[key] != '': # exclude upgradeKeys without input dataset
-                        steps[k+'INPUT']={'INPUT':InputInfo(dataSet='/RelVal'+upgradeDatasetFromFragment[frag]+'/%s/GEN-SIM'%(baseDataSetReleaseBetter[s],),location='STD')}
+#                        steps[k+'INPUT']={'INPUT':InputInfo(dataSet='/RelVal'+upgradeDatasetFromFragment[frag]+'/%s/GEN-SIM'%(baseDataSetReleaseBetter[s],),location='STD')}
+                        steps[k+'INPUT']={'INPUT':InputInfo(dataSet='/RelVal'+upgradeDatasetFromFragment[frag]+'/%s/GEN-SIM-DIGI-RAW'%(baseDataSetReleaseBetter[s],),location='STD')}
    else:
         for key in [key for year in upgradeKeys for key in upgradeKeys[year]]:
             k=step+'_'+key
