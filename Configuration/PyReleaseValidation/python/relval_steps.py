@@ -1704,6 +1704,7 @@ dataReco={ '--runUnscheduled':'',
           '--data':'',
           '--process':'reRECO',
           '--scenario':'pp',
+          '--customise_commands':'\'from RecoTracker.IterativeTracking.customise_MVAPhase1_cfi import customise_MVAPhase1; process = customise_MVAPhase1(process)\''
           }
 
 dataRecoAlCaCalo=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalCalZElectron+EcalCalWElectron+EcalUncalZElectron+EcalUncalWElectron+EcalTrg+HcalCalIsoTrk,DQM'}, dataReco])
@@ -2021,7 +2022,8 @@ step3Up2015Defaults = {
     '-n':'10',
     '--datatier':'GEN-SIM-RECO,MINIAODSIM,DQMIO',
     '--eventcontent':'RECOSIM,MINIAODSIM,DQM',
-    '--era' : 'Run2_2016'
+    '--era' : 'Run2_2016',
+    '--customise':'RecoTracker/IterativeTracking/customise_MVAPhase1_cfi.customise_MVAPhase1'
     }
 
 step3Up2015Defaults50ns = merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidationNoHLT+@miniAODValidation,DQM:@standardDQMFakeHLT+@miniAODDQM','--conditions':'auto:run2_mc_50ns','--era':'Run2_50ns'},step3Up2015Defaults])
@@ -3034,7 +3036,8 @@ for year,k in [(year,k) for year in upgradeKeys for k in upgradeKeys[year]]:
                                       '-n':'10',
                                       '--runUnscheduled':'',
                                       '--eventcontent':'RECOSIM,MINIAODSIM,DQM',
-                                      '--geometry' : geom
+                                      '--geometry' : geom,
+                                      '--customise':'RecoTracker/IterativeTracking/customise_MVAPhase1_cfi.customise_MVAPhase1'
                                       }
 
     upgradeStepDict['RecoFullGlobal'][k] = {'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,PAT,VALIDATION:@phase2Validation+@miniAODValidation,DQM:@phase2+@miniAODDQM',
