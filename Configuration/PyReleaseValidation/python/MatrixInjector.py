@@ -256,7 +256,8 @@ class MatrixInjector(object):
             wmsplit['HYBRIDRepackHI2015VR']=1
             wmsplit['HYBRIDZSHI2015']=1
             wmsplit['RECOHID15']=1
-                                    
+            wmsplit['DigiFullPU_2017PU']=1
+            wmsplit['RecoFullPU_2017PU']=1                                    
             #import pprint
             #pprint.pprint(wmsplit)            
         except:
@@ -496,6 +497,8 @@ class MatrixInjector(object):
                     t['KeepOutput']=True
                 if t['TaskName'].startswith('HYBRIDRepackHI2015VR'):
                     t['KeepOutput']=False
+#                if t['TaskName'].startswith('DigiFullPU'):
+#                    t['KeepOutput']=False
                 t.pop('nowmIO')
                 itask+=1
                 chainDict['Task%d'%(itask)]=t
