@@ -107,6 +107,7 @@ upgradeSteps['baseline'] = {
         'HARVESTFull',
         'HARVESTFullGlobal',
         'MiniAODFullGlobal',
+        'ALCAFull',
     ],
     'suffix' : '',
     'offset' : 0.0,
@@ -264,9 +265,9 @@ upgradeProperties[2017] = {
         'Geom' : 'DB:Extended',
         'GT' : 'auto:phase1_2018_realistic',
         'HLTmenu': '@relval2018',
-        'Era' : 'Run2_2018',
+        'Era' : 'Run3',
         'BeamSpot': 'Realistic25ns13TeVEarly2018Collision',
-        'ScenToRun' : ['GenSimFull','DigiFull','RecoFull','HARVESTFull','ALCAFull','NanoFull'],
+        'ScenToRun' : ['GenSimFull','DigiFull','RecoFull','HARVESTFull','ALCAFull'],
     },
     '2018Design' : {
         'Geom' : 'DB:Extended',
@@ -298,7 +299,7 @@ upgradeProperties[2017]['2017PU']['ScenToRun'] = ['GenSimFull','DigiFullPU','Rec
 upgradeProperties[2017]['2017DesignPU'] = deepcopy(upgradeProperties[2017]['2017Design'])
 upgradeProperties[2017]['2017DesignPU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU']
 upgradeProperties[2017]['2018PU'] = deepcopy(upgradeProperties[2017]['2018'])
-upgradeProperties[2017]['2018PU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU','NanoFull']
+upgradeProperties[2017]['2018PU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU','ALCAFullPU']
 upgradeProperties[2017]['2018DesignPU'] = deepcopy(upgradeProperties[2017]['2018Design'])
 upgradeProperties[2017]['2018DesignPU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU']
 
@@ -604,7 +605,7 @@ howMuches={'FourMuPt_1_200_pythia8_cfi':Kby(10,100),
            'DYToLL_M-50_14TeV_pythia8_cff':Kby(9,100),
            'DYToTauTau_M-50_14TeV_pythia8_tauola_cff':Kby(9,100),
            'TTbar_13TeV_TuneCUETP8M1_cfi':Kby(9,50),
-           'MinBias_13TeV_pythia8_TuneCUETP8M1_cfi':Kby(90,100),
+           'MinBias_13TeV_pythia8_TuneCUETP8M1_cfi':Kby(500,200),
            'ZEE_14TeV_TuneCUETP8M1_cfi':Kby(9,100),
            'QCD_Pt_80_120_13TeV_TuneCUETP8M1_cfi':Kby(9,100),
            'H125GGgluonfusion_13TeV_TuneCUETP8M1_cfi':Kby(9,50),

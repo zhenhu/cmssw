@@ -2902,7 +2902,8 @@ from  Configuration.PyReleaseValidation.upgradeWorkflowComponents import *
 defaultDataSets={}
 defaultDataSets['2017']='CMSSW_10_5_0_pre1-103X_mc2017_realistic_v2-v'
 defaultDataSets['2017Design']='CMSSW_10_0_0_pre2-100X_mc2017_design_IdealBS_v1-v'
-defaultDataSets['2018']='CMSSW_10_5_0_pre1-103X_upgrade2018_realistic_v8-v'
+#defaultDataSets['2018']='CMSSW_10_6_0_pre2-106X_postLS2_realistic_RoundOpticsLowSigmaZ_RunBased_v1_lowSigmaZ_resub-v'
+defaultDataSets['2018']='CMSSW_10_6_0_pre2-106X_postLS2_realistic_RoundOpticsHighSigmaZ_RunBased_v1_highSigmaZ_resub-v'
 defaultDataSets['2018Design']='CMSSW_10_5_0_pre1-103X_upgrade2018_design_v4-v'
 #defaultDataSets['2019']=''
 #defaultDataSets['2019Design']=''
@@ -2951,7 +2952,7 @@ for ds in defaultDataSets:
     elif '2023' in name:
     	PUDataSets[ds]={'-n':10,'--pileup':'AVE_200_BX_25ns','--pileup_input':'das:/RelValMinBias_14TeV/%s/GEN-SIM'%(name,)}
     else:
-        PUDataSets[ds]={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_14TeV/%s/GEN-SIM'%(name,)}
+      PUDataSets[ds]={'-n':10,'--pileup':'AVE_55_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
 
     #PUDataSets[ds]={'-n':10,'--pileup':'AVE_50_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
     #PUDataSets[ds]={'-n':10,'--pileup':'AVE_70_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
@@ -2989,8 +2990,10 @@ for year,k in [(year,k) for year in upgradeKeys for k in upgradeKeys[year]]:
                                        '--beamspot' : 'Realistic25ns13TeVEarly2017Collision',
                                        '--datatier' : 'GEN-SIM',
                                        '--eventcontent': 'FEVTDEBUG',
-                                       '--geometry' : geom
-                                       }
+                                       '--geometry' : geom,
+#'--customise_commands':'"process.VtxSmeared.Phi = cms.double ( 0.0 ) ; process.VtxSmeared.BetaStar = cms.double ( 28.0 ) ; process.VtxSmeared.Emittance = cms.double ( 4.762e-8 ) ; process.VtxSmeared.Alpha = cms.double ( 0.0 ) ; process.VtxSmeared.SigmaZ = cms.double ( 3.4 ) ; process.VtxSmeared.TimeOffset = cms.double ( 0.0 ) ; process.VtxSmeared.X0 = cms.double ( 0.0107682 ) ; process.VtxSmeared.Y0 = cms.double ( 0.041722 ) ; process.VtxSmeared.Z0 = cms.double ( 0.035748 ) "'
+'--customise_commands':'" process.VtxSmeared.Phi = cms.double ( 0.0 ) ; process.VtxSmeared.BetaStar = cms.double ( 28.0 ) ; process.VtxSmeared.Emittance = cms.double ( 4.762e-8 ) ; process.VtxSmeared.Alpha = cms.double ( 0.0 ) ; process.VtxSmeared.SigmaZ = cms.double ( 5.7 ) ; process.VtxSmeared.TimeOffset = cms.double ( 0.0 ) ; process.VtxSmeared.X0 = cms.double ( 0.0107682 ) ; process.VtxSmeared.Y0 = cms.double ( 0.041722 ); process.VtxSmeared.Z0 = cms.double ( 0.035748 ) "'
+}
     if beamspot is not None: upgradeStepDict['GenSimFull'][k]['--beamspot']=beamspot
 
     upgradeStepDict['GenSimHLBeamSpotFull'][k]= {'-s' : 'GEN,SIM',
@@ -3073,7 +3076,7 @@ for year,k in [(year,k) for year in upgradeKeys for k in upgradeKeys[year]]:
 
     upgradeStepDict['HARVESTFullGlobal'][k] = merge([{'-s': 'HARVESTING:@phase2Validation+@phase2+@miniAODValidation+@miniAODDQM'}, upgradeStepDict['HARVESTFull'][k]])
 
-    upgradeStepDict['ALCAFull'][k] = {'-s':'ALCA:TkAlMuonIsolated+TkAlMinBias+MuAlOverlaps+EcalESAlign+TkAlZMuMu+HcalCalHBHEMuonFilter+TkAlUpsilonMuMu+TkAlJpsiMuMu+SiStripCalMinBias',
+    upgradeStepDict['ALCAFull'][k] = {'-s':'ALCA:TkAlMinBias',
                                       '--conditions':gt,
                                       '--datatier':'ALCARECO',
                                       '-n':'10',
