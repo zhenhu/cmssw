@@ -2995,7 +2995,7 @@ for ds in defaultDataSets:
     key='MinBias_14TeV_pythia8_TuneCUETP8M1'+'_'+ds
     name=baseDataSetReleaseBetter[key]
     if '2017' in name:
-    	PUDataSets[ds]={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
+    	PUDataSets[ds]={'-n':10,'--pileup':'2017_25ns_WinterMC_PUScenarioV1_PoissonOOTPU','--pileup_input':'das:/RelValMinBias_13/CMSSW_10_6_1-106X_mc2017_realistic_v6-v1/GEN-SIM'}
     elif '2018' in name:
     	PUDataSets[ds]={'-n':10,'--pileup':'AVE_50_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
     elif 'postLS2' in name:
