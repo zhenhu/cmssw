@@ -33,6 +33,7 @@ step1Up2018ProdDefaults = merge ([{'--beamspot':'Realistic25ns13TeVEarly2018Coll
 # step1 gensim: for 2018 HI prod 
 step1Up2018HiProdDefaults = merge ([{'--beamspot':'RealisticPbPbCollision2018','--eventcontent':'RAWSIM','--geometry':'DB:Extended'},step1Up2018HiDefaults])
 
+step1Up2021Defaults = merge ([{'--conditions':'auto:phase1_2021_realistic','--era':'Run3','--beamspot':'Run3RoundOptics25ns13TeVLowSigmaZ'},step1Up2017Defaults])
 steps = Steps()
 
 #### Production test section ####
@@ -494,6 +495,9 @@ def gen2018prod(fragment,howMuch):
 def gen2018hiprod(fragment,howMuch):
     global step1Up2018HiProdDefaults
     return merge([{'cfg':fragment},howMuch,step1Up2018HiProdDefaults])
+def gen2021(fragment,howMuch):
+    global step1Up2021Defaults
+    return merge([{'cfg':fragment},howMuch,step1Up2021Defaults])
 
 ### Production test: 13 TeV equivalents
 steps['ProdMinBias_13']=gen2015('MinBias_13TeV_pythia8_TuneCUETP8M1_cfi',Kby(9,100))
@@ -594,6 +598,16 @@ steps['ZTT_13UP18']=gen2018('ZTT_All_hadronic_13TeV_TuneCUETP8M1_cfi',Kby(9,80))
 steps['H125GGgluonfusion_13UP18']=gen2018('H125GGgluonfusion_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
 steps['QQH1352T_13UP18']=gen2018('QQH1352T_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
 steps['SMS-T1tttt_mGl-1500_mLSP-100_13UP18']=gen2018('SMS-T1tttt_mGl-1500_mLSP-100_13TeV-pythia8_cfi',Kby(9,50))
+
+### 2018 wf: only the ones for premixing (for the moment)
+steps['NuGun_UP21']=gen2021('SingleNuE10_cfi.py',Kby(9,50))
+steps['TTbar_13UP21']=gen2021('TTbar_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
+steps['ZEE_13UP21']=gen2021('ZEE_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
+steps['ZMM_13UP21']=gen2021('ZMM_13TeV_TuneCUETP8M1_cfi',Kby(21,100))
+steps['ZTT_13UP21']=gen2021('ZTT_All_hadronic_13TeV_TuneCUETP8M1_cfi',Kby(9,80))
+steps['H125GGgluonfusion_13UP21']=gen2021('H125GGgluonfusion_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
+steps['QQH1352T_13UP21']=gen2021('QQH1352T_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
+steps['SMS-T1tttt_mGl-1500_mLSP-100_13UP21']=gen2021('SMS-T1tttt_mGl-1500_mLSP-100_13TeV-pythia8_cfi',Kby(9,50))
 
 
 # 13TeV High Stats samples
@@ -770,6 +784,15 @@ steps['QQH1352T_13UP18INPUT']={'INPUT':InputInfo(dataSet='/RelValQQH1352T_13/%s/
 steps['NuGun_UP18INPUT']={'INPUT':InputInfo(dataSet='/RelValNuGun/%s/GEN-SIM'%(baseDataSetRelease[18],),location='STD')}
 steps['SMS-T1tttt_mGl-1500_mLSP-100_13UP18INPUT']={'INPUT':InputInfo(dataSet='/RelValSMS-T1tttt_mGl-1500_mLSP-100_13/%s/GEN-SIM'%(baseDataSetRelease[18],),location='STD')}
 
+# INPUT commands for 2018 wf
+steps['TTbar_13UP21INPUT']={'INPUT':InputInfo(dataSet='/RelValTTbar_14TeV/CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v1/GEN-SIM',location='STD')}
+steps['ZEE_13UP21INPUT']={'INPUT':InputInfo(dataSet='/RelValZEE_14/CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v1/GEN-SIM',location='STD')}
+steps['ZMM_13UP21INPUT']={'INPUT':InputInfo(dataSet='/RelValZMM_14/CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v1/GEN-SIM',location='STD')}
+steps['ZTT_13UP21INPUT']={'INPUT':InputInfo(dataSet='/RelValZTT_14/CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v1/GEN-SIM',location='STD')}
+steps['H125GGgluonfusion_13UP21INPUT']={'INPUT':InputInfo(dataSet='/RelValH125GGgluonfusion_14/CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v1/GEN-SIM',location='STD')}
+steps['QCDFlat_13UP21INPUT']={'INPUT':InputInfo(dataSet='/RelValQCD_FlatPt_15_3000HS_14/CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v1/GEN-SIM',location='STD')}
+steps['NuGun_UP21INPUT']={'INPUT':InputInfo(dataSet='/RelValNuGun/CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v1/GEN-SIM',location='STD')}
+steps['SMS-T1tttt_mGl-1500_mLSP-100_13UP21INPUT']={'INPUT':InputInfo(dataSet='/RelValSMS-T1tttt_mGl-1500_mLSP-100_13/CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v1/GEN-SIM',location='STD')}
 
 #input for fast sim workflows to be added - TODO
 
@@ -1480,6 +1503,7 @@ PU50={'-n':10,'--pileup':'AVE_35_BX_50ns','--pileup_input':'das:/RelValMinBias_1
 PUHI={'-n':10,'--pileup_input':'das:/RelValHydjetQ_B12_5020GeV_2018/%s/GEN-SIM'%(baseDataSetRelease[9])}
 PU25UP17={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(baseDataSetRelease[13],)}
 PU25UP18={'-n':10,'--pileup':'AVE_50_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(baseDataSetRelease[18],)}
+PU25UP21={'-n':10,'--pileup':'Run3_Flat55To75_PoissonOOTPU','--pileup_input':'das:/RelValMinBias_14TeV/CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v1/GEN-SIM'}
 
 #PU for FastSim
 # FS_PU_INPUT_13TEV = "file:/afs/cern.ch/work/l/lveldere/minbias.root" # placeholder for relval to be produced with wf  135.8
@@ -1620,10 +1644,25 @@ premixUp2018Defaults = merge([{'--conditions':'auto:phase1_2018_realistic'},
                                   {'--era':'Run2_2018'},
                                   premixUp2015Defaults])
 
+premixUp2021Defaults = merge([{'--conditions':'106X_mcRun3_2021_realistic_v3'},
+                                  {'--era':'Run3'},
+                                  {'--customise_commands':'"process.mix.digitizers.pixel.ThresholdInElectrons_BPix_L1 = cms.double(1300.0);process.mix.digitizers.pixel.ThresholdInElectrons_BPix_L2 = cms.double(1600.0);process.mix.digitizers.pixel.ThresholdInElectrons_BPix =cms.double(1600.0);process.mix.digitizers.pixel.ThresholdInElectrons_FPix = cms.double(1600);"'},
+                                  premixUp2015Defaults])
+
+premixUp2023Defaults = merge([{'--conditions':'106X_mcRun3_2023_realistic_v3'},
+                                  premixUp2021Defaults])
+
+premixUp2024Defaults = merge([{'--conditions':'106X_mcRun3_2024_realistic_v4'},
+                                  premixUp2021Defaults])
+
+
 steps['PREMIXUP15_PU25']=merge([PU25,Kby(100,100),premixUp2015Defaults])
 steps['PREMIXUP15_PU50']=merge([PU50,Kby(100,100),premixUp2015Defaults50ns])
 steps['PREMIXUP17_PU25']=merge([PU25UP17,Kby(100,100),premixUp2017Defaults])
 steps['PREMIXUP18_PU25']=merge([PU25UP18,Kby(100,100),premixUp2018Defaults])
+steps['PREMIXUP21_PU25']=merge([PU25UP21,Kby(100,100),premixUp2021Defaults])
+steps['PREMIXUP23_PU25']=merge([PU25UP21,Kby(100,100),premixUp2023Defaults])
+steps['PREMIXUP24_PU25']=merge([PU25UP21,Kby(100,100),premixUp2024Defaults])
 
 digiPremixUp2015Defaults25ns = {
     '--conditions'   : 'auto:run2_mc',
@@ -1681,6 +1720,18 @@ digiPremixLocalPileupUp2018Defaults25ns = merge([digiPremixLocalPileup,
                                                  digiPremixUp2018Defaults25ns])
 
 
+digiPremixUp2021Defaults25ns = {
+    '--conditions'   : '106X_mcRun3_2024_realistic_v4',
+    '-s'             : 'DIGI:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2018',
+    '--pileup_input'  :  'das:/RelValPREMIXUP24_PU25/CMSSW_10_6_1_patch1-PU_106X_mcRun3_2024_realistic_v4-v1/PREMIX',
+    '--eventcontent' : 'FEVTDEBUGHLT',
+    '--datatier'     : 'GEN-SIM-DIGI-RAW-HLTDEBUG',
+    '--datamix'      : 'PreMix',
+    '--procModifiers': 'premix_stage2',
+    '--era'          : 'Run3',
+'--customise_commands':'"process.mix.digitizers.pixel.ThresholdInElectrons_BPix_L1 = cms.double(1300.0);process.mix.digitizers.pixel.ThresholdInElectrons_BPix_L2 = cms.double(1600.0);process.mix.digitizers.pixel.ThresholdInElectrons_BPix =cms.double(1600.0);process.mix.digitizers.pixel.ThresholdInElectrons_FPix = cms.double(1600);process.hltESPPixelCPEGeneric.IrradiationBiasCorrection = True;"'
+    }  
+
 steps['DIGIPRMXUP15_PU25']=merge([digiPremixUp2015Defaults25ns])
 steps['DIGIPRMXLOCALUP15_PU25']=merge([digiPremixLocalPileupUp2015Defaults25ns])
 steps['DIGIPRMXUP15_PU50']=merge([digiPremixUp2015Defaults50ns])
@@ -1688,6 +1739,7 @@ steps['DIGIPRMXUP17_PU25']=merge([digiPremixUp2017Defaults25ns])
 steps['DIGIPRMXLOCALUP17_PU25']=merge([digiPremixLocalPileupUp2017Defaults25ns])
 steps['DIGIPRMXUP18_PU25']=merge([digiPremixUp2018Defaults25ns])
 steps['DIGIPRMXLOCALUP18_PU25']=merge([digiPremixLocalPileupUp2018Defaults25ns])
+steps['DIGIPRMXUP21_PU25']=merge([digiPremixUp2021Defaults25ns])
 
 premixProd25ns = {'-s'             : 'DIGI,DATAMIX,L1,DIGI2RAW,HLT:@relval2016',
                  '--eventcontent' : 'PREMIXRAW',
@@ -2270,6 +2322,12 @@ steps['RECOPRMXUP18_PU25']=merge([
 steps['RECOPRMXUP18_PU25_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'},steps['RECOPRMXUP18_PU25']])
 steps['RECOPRMXUP18_PU25_L1TMuDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'},steps['RECOPRMXUP18_PU25']])
 
+steps['RECOPRMXUP21_PU25']=merge([
+        {'--conditions':'106X_mcRun3_2024_realistic_v4','--era':'Run3','--procModifiers':'premix_stage2','--customise_commands':'"process.PixelCPEGenericESProducer.IrradiationBiasCorrection = True"'},
+        step3Up2015Defaults])
+steps['RECOPRMXUP21_PU25_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'},steps['RECOPRMXUP21_PU25']])
+steps['RECOPRMXUP21_PU25_L1TMuDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'},steps['RECOPRMXUP21_PU25']])
+
 recoPremixUp15prod = merge([
         #{'-s':'RAW2DIGI,L1Reco,RECO,EI'}, # tmp
         {'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,DQM:DQMOfflinePOGMC'},
@@ -2702,11 +2760,19 @@ steps['HARVESTUP17']=merge([{'--conditions':'auto:phase1_2017_realistic','--era'
 steps['HARVESTUP18']=merge([{'--conditions':'auto:phase1_2018_realistic','--era' : 'Run2_2018','--geometry' : 'DB:Extended'},steps['HARVESTUP15']])
 steps['HARVESTUP18_L1TEgDQM']=merge([{'-s':'HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM+@L1TEgamma'},steps['HARVESTUP18']])
 steps['HARVESTUP18_L1TMuDQM']=merge([{'-s':'HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM+@L1TMuon'},steps['HARVESTUP18']])
+steps['HARVESTUP21']=merge([{'--conditions':'106X_mcRun3_2024_realistic_v4','--era' : 'Run3','--geometry' : 'DB:Extended'},steps['HARVESTUP15']])
+steps['HARVESTUP21_L1TEgDQM']=merge([{'-s':'HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM+@L1TEgamma'},steps['HARVESTUP21']])
+steps['HARVESTUP21_L1TMuDQM']=merge([{'-s':'HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM+@L1TMuon'},steps['HARVESTUP21']])
 
 steps['HARVESTUP17_PU25']=steps['HARVESTUP17']
 steps['HARVESTUP18_PU25']=steps['HARVESTUP18']
 steps['HARVESTUP18_PU25_L1TEgDQM']=steps['HARVESTUP18_L1TEgDQM']
 steps['HARVESTUP18_PU25_L1TMuDQM']=steps['HARVESTUP18_L1TMuDQM']
+
+steps['HARVESTUP21_PU25']=steps['HARVESTUP21']
+steps['HARVESTUP21_PU25_L1TEgDQM']=steps['HARVESTUP21_L1TEgDQM']
+steps['HARVESTUP21_PU25_L1TMuDQM']=steps['HARVESTUP21_L1TMuDQM']
+
 
 steps['HARVESTDR2_REMINIAOD_mc2016']=merge([{'-s':'HARVESTING:@miniAODValidation+@miniAODDQM','--era':'Run2_2016,run2_miniAOD_80XLegacy'},steps['HARVESTUP15']])
 steps['HARVESTUP17_REMINIAOD_mc2017']=merge([{'-s':'HARVESTING:@miniAODValidation+@miniAODDQM','--era':'Run2_2017,run2_miniAOD_94XFall17'},steps['HARVESTUP17']])
@@ -2954,7 +3020,7 @@ defaultDataSets['2017']='CMSSW_10_5_0_pre1-103X_mc2017_realistic_v2-v'
 defaultDataSets['2017Design']='CMSSW_10_0_0_pre2-100X_mc2017_design_IdealBS_v1-v'
 defaultDataSets['2018']='CMSSW_10_5_0_pre1-103X_upgrade2018_realistic_v8-v'
 defaultDataSets['2018Design']='CMSSW_10_5_0_pre1-103X_upgrade2018_design_v4-v'
-defaultDataSets['2021']='CMSSW_10_6_0_pre3-105X_postLS2_realistic_v6-v'
+defaultDataSets['2021']='CMSSW_10_6_1-106X_mcRun3_2021_realistic_v1_rsb-v'
 defaultDataSets['2021Design']='CMSSW_10_6_0_pre3-105X_postLS2_realistic_v6-v'
 defaultDataSets['2023D17']='CMSSW_10_2_0_pre2-101X_upgrade2023_realistic_v5_2023D17noPU-v'
 defaultDataSets['2023D19']=''
@@ -2998,8 +3064,8 @@ for ds in defaultDataSets:
     	PUDataSets[ds]={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
     elif '2018' in name:
     	PUDataSets[ds]={'-n':10,'--pileup':'AVE_50_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
-    elif 'postLS2' in name:
-    	PUDataSets[ds]={'-n':10,'--pileup':'AVE_50_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
+    elif 'mcRun3' in name:
+    	PUDataSets[ds]={'-n':10,'--pileup':'Run3_Flat55To75_PoissonOOTPU','--pileup_input':'das:/RelValMinBias_14TeV/%s/GEN-SIM'%(name,)}
     elif '2023' in name:
     	PUDataSets[ds]={'-n':10,'--pileup':'AVE_200_BX_25ns','--pileup_input':'das:/RelValMinBias_14TeV/%s/GEN-SIM'%(name,)}
     else:
@@ -3068,7 +3134,8 @@ for year,k in [(year,k) for year in upgradeKeys for k in upgradeKeys[year]]:
                                       '--datatier':'GEN-SIM-DIGI-RAW',
                                       '-n':'10',
                                       '--eventcontent':'FEVTDEBUGHLT',
-                                      '--geometry' : geom
+                                      '--geometry' : geom,
+'--customise_commands':'"process.mix.digitizers.pixel.ThresholdInElectrons_BPix_L1 = cms.double(1300.0);process.mix.digitizers.pixel.ThresholdInElectrons_BPix_L2 = cms.double(1600.0);process.mix.digitizers.pixel.ThresholdInElectrons_BPix =cms.double(1600.0);process.mix.digitizers.pixel.ThresholdInElectrons_FPix = cms.double(1600);process.hltESPPixelCPEGeneric.IrradiationBiasCorrection = True;"'
                                       }
 
     # Adding Track trigger step in step2
@@ -3086,7 +3153,8 @@ for year,k in [(year,k) for year in upgradeKeys for k in upgradeKeys[year]]:
                                       '-n':'10',
                                       '--runUnscheduled':'',
                                       '--eventcontent':'RECOSIM,MINIAODSIM,DQM',
-                                      '--geometry' : geom
+                                      '--geometry' : geom,
+'--customise_commands':'"process.PixelCPEGenericESProducer.IrradiationBiasCorrection = True"'
                                       }
 
     upgradeStepDict['RecoFullGlobal'][k] = {'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,PAT,VALIDATION:@phase2Validation+@miniAODValidation,DQM:@phase2+@miniAODDQM',
